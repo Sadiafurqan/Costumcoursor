@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Cursor Interactive Effect</title>
+<style>
+    body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    cursor: none; /* Hide the default cursor */
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin: 20px;
+}
+
+p {
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Custom cursor styling */
+.custom-cursor {
+    position: absolute;
+    width: 40px; /* Adjust the size of the cursor */
+    height: 40px;
+    background: url('https://example.com/default-cursor.png') no-repeat center center;
+    background-size: contain;
+    pointer-events: none;
+    transition: transform 0.2s ease, background 0.2s ease;
+    z-index: 1000;
+}
+
+/* Hover effect for the cursor */
+.custom-cursor.hover-target {
+    background: url('https://example.com/hover-cursor.png') no-repeat center center;
+    background-size: contain;
+}
+
+</style>
+</head>
+<body>
+    <div class="content">
+        <h1 class="hover-target">Hover over me!</h1>
+        <p>Move the cursor around to see different effects.</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
